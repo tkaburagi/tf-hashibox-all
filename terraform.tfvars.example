@@ -1,0 +1,32 @@
+# NOTE: Cloud credentials should be set in environment variables.
+#       https://www.terraform.io/docs/providers/aws/index.html#environment-variables
+
+# These variables should be set, at minimum. See `variables.tf` for others.
+
+owner = "<YOUR-IAM-USERNAME>"
+region = "us-west-2"
+workstations = "10"
+namespace = "vault-training"
+public_key = "ssh-rsa AAAA..."
+
+#----------------------------------------------------------------------------------
+# Set student workstation login username / password
+# WARNING: Don't make the password too easy (e.g. "password01"); however,
+#          Vault 102 students will be entering this password a few times.
+#          Therefore, make the password memorizable (e.g. "vault102-sanfrancisco")
+#----------------------------------------------------------------------------------
+training_username = "auser"
+training_password = "correct-horse-battery-syrup"
+
+#---------------------------------------------------
+# To specify a version different from the default
+#---------------------------------------------------
+# vault_url = "https://releases.hashicorp.com/vault/1.1.2/vault_1.1.2_linux_amd64.zip"
+
+
+#--------------------------------------------------------------------------
+# To specify the EC2 instance type (default is t2.medium)
+# NOTE: For Vault 102, it is recommended to use a larger instance type
+#       to avoid out-of-memory
+#--------------------------------------------------------------------------
+# ec2_type = "m5.large"
